@@ -1,13 +1,10 @@
 package com.example.myprog;
 
+import com.example.myprog.garage.Car;
+import com.example.myprog.garage.ParkingSpot;
+import com.example.myprog.garage.ParkingSpotKt;
+
 public class MyProg {
-
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-
-        Car myCar = new Car();
-        myCar.sayHello();
-    }
 
     public static int multiply(int a, int b) {
         int result = 0;
@@ -15,6 +12,30 @@ public class MyProg {
             result += a;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        nullCheckingExamples();
+    }
+
+    private static void nullCheckingExamples() {
+        Car myCar = new Car();
+
+        /* Null dereference, warning due to Java @Nullable annotation. */
+        ParkingSpot mySpot = new ParkingSpot(20, 10, null);
+        mySpot.getCar().sayHello();
+
+        /* Kotlin version, bytecode also gets an equivalent annotation. */
+        ParkingSpotKt mySpotKt = new ParkingSpotKt(20, 10, null);
+        mySpotKt.getCar().sayHello();
+
+        /* Worked around by null-checking a local variable. Safe! */
+        Car theCarToCheck = mySpot.getCar();
+        if (theCarToCheck != null) {
+            theCarToCheck.sayHello();
+        } else {
+            System.out.println("The car is null!");
+        }
     }
 
 }

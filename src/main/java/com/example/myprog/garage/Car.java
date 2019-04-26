@@ -1,4 +1,4 @@
-package com.example.myprog;
+package com.example.myprog.garage;
 
 public class Car {
 
