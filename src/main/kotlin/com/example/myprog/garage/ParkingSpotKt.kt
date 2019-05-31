@@ -1,6 +1,6 @@
 package com.example.myprog.garage
 
-class ParkingSpotKt(
+data class ParkingSpotKt(
         val length: Int,
         val width: Int,
         var car: Car?
