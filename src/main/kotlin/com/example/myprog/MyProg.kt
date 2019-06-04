@@ -8,7 +8,6 @@ fun main() {
 }
 
 fun nullCheckingExamples() {
-    val myCar = Car()
 
     val mySpot = ParkingSpotKt(20, 10, null)
 

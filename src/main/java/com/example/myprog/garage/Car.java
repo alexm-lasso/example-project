@@ -1,9 +1,10 @@
 package com.example.myprog.garage;
 
-public class Car {
+public class Car extends MotorizedVehicle {
 
   /** This is the constructor */
-  public Car() {
+  public Car(Engine engine) {
+    super(4, engine);
   }
 
   /**

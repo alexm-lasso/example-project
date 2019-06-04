@@ -19,7 +19,6 @@ public class MyProg {
     }
 
     private static void nullCheckingExamples() {
-        Car myCar = new Car();
 
         /* Null dereference, warning due to Java @Nullable annotation. */
         ParkingSpot mySpot = new ParkingSpot(20, 10, null);
