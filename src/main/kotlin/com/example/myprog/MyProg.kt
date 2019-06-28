@@ -1,6 +1,5 @@
 package com.example.myprog
 
-import com.example.myprog.garage.Car
 import com.example.myprog.garage.ParkingSpotKt
 
 fun main() {

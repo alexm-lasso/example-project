@@ -3,7 +3,7 @@ package com.example.myprog.garage
 data class ParkingSpotKt(
         val length: Int,
         val width: Int,
-        var car: Car?
+        var car: CarKt?
 ) {
 
     /*
