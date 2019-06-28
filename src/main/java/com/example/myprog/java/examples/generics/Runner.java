@@ -1,7 +1,7 @@
 package com.example.myprog.java.examples.generics;
 
 import com.example.myprog.java.garage.Car;
-import com.example.myprog.java.garage.Engine;
+import com.example.myprog.java.garage.engines.Engine;
 import com.example.myprog.java.garage.MotorizedVehicle;
 import com.example.myprog.java.garage.Vehicle;
 

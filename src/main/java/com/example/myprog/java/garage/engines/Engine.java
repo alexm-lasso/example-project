@@ -1,4 +1,4 @@
-package com.example.myprog.java.garage;
+package com.example.myprog.java.garage.engines;
 
 public class Engine {
 
