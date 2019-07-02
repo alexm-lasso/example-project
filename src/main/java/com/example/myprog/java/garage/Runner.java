@@ -1,6 +1,6 @@
 package com.example.myprog.java.garage;
 
-import com.example.myprog.java.garage.engines.Engine;
+import com.example.myprog.java.garage.engines.CarEngine;
 
 public class Runner {
 
@@ -10,11 +10,9 @@ public class Runner {
     }
 
     private static void referencesExample() {
-        Engine engine = new Engine(200);
-
-        Vehicle vehicle = new Car(engine);
-        MotorizedVehicle motorizedVehicle = new Car(engine);
-        Car car = new Car(engine);
+        Vehicle vehicle = new Car(new CarEngine(200));
+        MotorizedVehicle motorizedVehicle = new Car(new CarEngine(200));
+        Car car = new Car(new CarEngine(200));
 
         System.out.println(vehicle instanceof Vehicle);
         System.out.println(vehicle instanceof MotorizedVehicle);
@@ -34,10 +32,8 @@ public class Runner {
 
 
     private static void castingExample() {
-        Engine engine = new Engine(200);
-
-        Vehicle vehicle = new Car(engine);
-        Car car = new Car(engine);
+        Vehicle vehicle = new Car(new CarEngine(200));
+        Car car = new Car(new CarEngine(200));
 
         car.sayHello();
 //        vehicle.sayHello();
@@ -49,11 +45,12 @@ public class Runner {
     }
 
     private static void behaviourFromObjectType() {
-        Engine engine = new Engine(200);
-        MotorizedVehicle motorizedVehicle = new Car(engine);
-        Car car = new Car(engine);
+        MotorizedVehicle motorizedVehicle = new Car(new CarEngine(200));
+        Car car = new Car(new CarEngine(200));
 
         motorizedVehicle.method1();
         car.method1();
+
+        CarEngine engine = car.getEngine();
     }
 }

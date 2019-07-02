@@ -1,14 +1,19 @@
 package com.example.myprog.java.garage;
 
-import com.example.myprog.java.garage.engines.Engine;
+import com.example.myprog.java.garage.engines.CarEngine;
 
 public class Car extends MotorizedVehicle {
 
     /**
      * This is the constructor
      */
-    public Car(Engine engine) {
+    public Car(CarEngine engine) {
         super(4, engine);
+    }
+
+    @Override
+    public CarEngine getEngine() {
+        return (CarEngine) super.getEngine();
     }
 
     /**

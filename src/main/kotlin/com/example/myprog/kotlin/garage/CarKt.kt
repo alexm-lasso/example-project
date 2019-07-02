@@ -1,9 +1,10 @@
 package com.example.myprog.kotlin.garage
 
-import com.example.myprog.java.garage.engines.Engine
+import com.example.myprog.java.garage.engines.CarEngine
 
 class CarKt(
-        engine: Engine
+        // in Kotlin we just override the property, which takes care of field/getter/setter/ctor param
+        override val engine: CarEngine
 ) : MotorizedVehicleKt(4, engine) {
 
     fun sayHello() {
