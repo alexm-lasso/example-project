@@ -123,4 +123,19 @@ public class Runner {
     }
 
 
+    /**
+     * Method-specific type parameter.
+     */
+    public static <U> U printTheThing(U u) {
+        System.out.println(u.toString());
+        return u;
+    }
+
+    /**
+     * Method-specific type parameters can have bounds too.
+     */
+    public static <V extends Vehicle> V printTheVehicle(V v) {
+        System.out.println(v.toString() + ", number of wheels=" + v.getNbWheels());
+        return v;
+    }
 }

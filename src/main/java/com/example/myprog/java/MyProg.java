@@ -1,8 +1,8 @@
 package com.example.myprog.java;
 
 import com.example.myprog.java.garage.Car;
-import com.example.myprog.java.garage.ParkingSpot;
-import com.example.myprog.kotlin.garage.ParkingSpotKt;
+import com.example.myprog.java.garage.parking.ParkingSpot;
+import com.example.myprog.kotlin.garage.parking.ParkingSpotKt;
 
 public class MyProg {
 

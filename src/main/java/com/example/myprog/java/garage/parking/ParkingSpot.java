@@ -1,5 +1,6 @@
-package com.example.myprog.java.garage;
+package com.example.myprog.java.garage.parking;
 
+import com.example.myprog.java.garage.Car;
 import org.jetbrains.annotations.Nullable;
 
 public class ParkingSpot {

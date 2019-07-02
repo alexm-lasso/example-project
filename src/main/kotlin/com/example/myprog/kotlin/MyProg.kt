@@ -1,6 +1,6 @@
 package com.example.myprog.kotlin
 
-import com.example.myprog.kotlin.garage.ParkingSpotKt
+import com.example.myprog.kotlin.garage.parking.ParkingSpotKt
 
 fun main() {
     nullCheckingExamples()

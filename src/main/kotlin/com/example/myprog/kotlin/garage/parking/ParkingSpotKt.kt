@@ -1,4 +1,6 @@
-package com.example.myprog.kotlin.garage
+package com.example.myprog.kotlin.garage.parking
+
+import com.example.myprog.kotlin.garage.CarKt
 
 data class ParkingSpotKt(
         val length: Int,
