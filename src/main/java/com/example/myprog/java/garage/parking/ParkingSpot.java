@@ -1,26 +1,27 @@
 package com.example.myprog.java.garage.parking;
 
-import com.example.myprog.java.garage.Car;
-import org.jetbrains.annotations.Nullable;
+import com.example.myprog.java.garage.Vehicle;
 
-public class ParkingSpot {
+/**
+ *
+ * @param <T> Type of vehicle that goes into the parking spot.
+ */
+public class ParkingSpot<T extends Vehicle> {
 
     private final int length;
     private final int width;
 
     private final transient int area;
 
-    private Car car;
+    private T vehicle;
 
-    private boolean isEmpty;
-
-    public ParkingSpot(int length, int width, Car car) {
+    public ParkingSpot(int length, int width, T car) {
         /* Argument checking, typically done first thing inside a method. */
         if (length < 10) throw new IllegalArgumentException("Length must be 10 or more.");
 
         this.length = length;
         this.width = width;
-        this.car = car;
+        this.vehicle = car;
 
         this.area = length * width;
     }
@@ -33,16 +34,12 @@ public class ParkingSpot {
         return width;
     }
 
-    public Car getCar() {
-        return car;
+    public T getVehicle() {
+        return vehicle;
     }
 
-    public void setCar(@Nullable Car car) {
-        this.car = car;
-    }
-
-    public boolean isEmpty() {
-        return isEmpty;
+    public void setVehicle(T vehicle) {
+        this.vehicle = vehicle;
     }
 
     public int getArea() {
@@ -58,8 +55,7 @@ public class ParkingSpot {
 
         if (length != that.length) return false;
         if (width != that.width) return false;
-        if (isEmpty != that.isEmpty) return false;
-        return car != null ? car.equals(that.car) : that.car == null;
+        return vehicle != null ? vehicle.equals(that.vehicle) : that.vehicle == null;
 
     }
 
@@ -67,8 +63,7 @@ public class ParkingSpot {
     public int hashCode() {
         int result = length;
         result = 31 * result + width;
-        result = 31 * result + (car != null ? car.hashCode() : 0);
-        result = 31 * result + (isEmpty ? 1 : 0);
+        result = 31 * result + (vehicle != null ? vehicle.hashCode() : 0);
         return result;
     }
 }

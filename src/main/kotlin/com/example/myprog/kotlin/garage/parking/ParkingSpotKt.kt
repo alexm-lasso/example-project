@@ -1,11 +1,11 @@
 package com.example.myprog.kotlin.garage.parking
 
-import com.example.myprog.kotlin.garage.CarKt
+import com.example.myprog.java.garage.Vehicle
 
-data class ParkingSpotKt(
+data class ParkingSpotKt<T : Vehicle>(
         val length: Int,
         val width: Int,
-        var car: CarKt?
+        val vehicle: T?
 ) {
 
     /*

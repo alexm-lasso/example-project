@@ -123,6 +123,14 @@ public class Runner {
     }
 
 
+    private static void test() {
+        var a = Runner.<String>printTheThing("hello");
+
+        Vehicle vehicle = new Car(new CarEngine(100));
+        var b = Runner.printTheVehicle(vehicle); // 'b' is of type Vehicle
+//        var c = Runner.<Car> printTheVehicle(vehicle); // 'c' is of type Car
+    }
+
     /**
      * Method-specific type parameter.
      */

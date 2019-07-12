@@ -1,12 +1,24 @@
 package com.example.myprog.java.garage;
 
 import com.example.myprog.java.garage.engines.CarEngine;
+import com.example.myprog.java.garage.parking.Driveway;
+import com.example.myprog.java.garage.parking.ParkingSpot;
 
 public class Runner {
 
     public static void main(String[] args) {
 //        referencesExample();
-        behaviourFromObjectType();
+//        behaviourFromObjectType();
+
+        Vehicle vehicle = new Car(new CarEngine(200));
+        Car car = new Car(new CarEngine(200));
+        ParkingSpot<Car> spot = new ParkingSpot<>(20, 10, null);
+        spot.setVehicle(car);
+        var ref = spot.getVehicle();
+
+        Driveway dw = new Driveway(10, 10, null);
+        spot.setVehicle(car);
+        var ref2 = spot.getVehicle();
     }
 
     private static void referencesExample() {

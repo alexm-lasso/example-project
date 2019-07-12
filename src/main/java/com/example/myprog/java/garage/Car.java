@@ -2,7 +2,7 @@ package com.example.myprog.java.garage;
 
 import com.example.myprog.java.garage.engines.CarEngine;
 
-public class Car extends MotorizedVehicle {
+public final class Car extends MotorizedVehicle {
 
     /**
      * This is the constructor
