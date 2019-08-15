@@ -5,7 +5,9 @@ import com.example.myprog.java.garage.engines.CarEngine
 class CarKt(
         // in Kotlin we just override the property, which takes care of field/getter/setter/ctor param
         override val engine: CarEngine
-) : MotorizedVehicleKt(4, engine) {
+) : MotorizedVehicleKt(engine) {
+
+    override val nbWheels: Int = 4
 
     fun sayHello() {
         println("Hello world from CarKt!")

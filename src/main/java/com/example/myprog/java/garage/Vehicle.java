@@ -8,7 +8,7 @@ public class Vehicle {
         this.nbWheels = nbWheels;
     }
 
-    public int getNbWheels() {
+    public final int getNbWheels() {
         return nbWheels;
     }
 }

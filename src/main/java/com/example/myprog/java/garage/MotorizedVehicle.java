@@ -2,7 +2,7 @@ package com.example.myprog.java.garage;
 
 import com.example.myprog.java.garage.engines.Engine;
 
-public class MotorizedVehicle extends Vehicle {
+public abstract class MotorizedVehicle extends Vehicle {
 
     private final Engine engine;
 
@@ -15,8 +15,6 @@ public class MotorizedVehicle extends Vehicle {
         return engine;
     }
 
-    public void method1() {
-        System.out.println("this is method1 from MotorizedVehicle");
-    }
+    public abstract void method1();
 
 }
