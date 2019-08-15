@@ -1,6 +1,7 @@
 package com.example.myprog.java.garage.parking;
 
 import com.example.myprog.java.garage.Vehicle;
+import org.jetbrains.annotations.Nullable;
 
 /**
  *
@@ -34,6 +35,7 @@ public class ParkingSpot<T extends Vehicle> {
         return width;
     }
 
+    @Nullable
     public T getVehicle() {
         return vehicle;
     }

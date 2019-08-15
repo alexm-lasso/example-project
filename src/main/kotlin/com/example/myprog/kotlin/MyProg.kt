@@ -1,5 +1,6 @@
 package com.example.myprog.kotlin
 
+import com.example.myprog.kotlin.garage.CarKt
 import com.example.myprog.kotlin.garage.parking.ParkingSpotKt
 
 fun main() {
@@ -8,23 +9,23 @@ fun main() {
 
 fun nullCheckingExamples() {
 
-    val mySpot = ParkingSpotKt(20, 10, null)
+    val mySpot = ParkingSpotKt<CarKt>(20, 10, null)
 
     /* Compiler error in Kotlin! */
-//    mySpot.car.sayHello()
+//    mySpot.vehicle.sayHello()
 
 
     /* Null-checking */
-    val theCarToCheck = mySpot.car
+    val theCarToCheck = mySpot.vehicle
     if (theCarToCheck != null) {
         theCarToCheck.sayHello() // JetBrains showing-off the smart-cast functionality :P
     }
 
     /* Using the "?." safe-dereference operator. */
-    mySpot.car?.sayHello()
+    mySpot.vehicle?.sayHello()
 
     /* This can be paired with the Elvis operator "?:" */
-    mySpot.car?.sayHello() ?: println("The car is null!")
+    mySpot.vehicle?.sayHello() ?: println("The car is null!")
 
 
 
