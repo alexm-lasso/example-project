@@ -1,4 +1,4 @@
-package com.example.myprog.kotlin.examples
+package com.example.myprog.kotlin.examples.fields
 
 /**
  * Properties can be defined at the top-level!

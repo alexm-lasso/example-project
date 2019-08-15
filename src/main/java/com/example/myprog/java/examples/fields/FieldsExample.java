@@ -1,4 +1,4 @@
-package com.example.myprog.java.examples;
+package com.example.myprog.java.examples.fields;
 
 public class FieldsExample {
 
